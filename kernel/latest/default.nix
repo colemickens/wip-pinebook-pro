@@ -46,7 +46,7 @@ buildLinux (args // {
   kernelPatches = lib.lists.unique (kernelPatches ++ [
     pkgs.kernelPatches.bridge_stp_helper
     pkgs.kernelPatches.request_key_helper
-    pkgs.kernelPatches.export_kernel_fpu_functions."5.3"
+    #pkgs.kernelPatches.export_kernel_fpu_functions."5.3"
     additionalConfig
   ]);
 
