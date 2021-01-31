@@ -17,7 +17,7 @@ let
     splitString
     optionalString
   ;
-  version = "5.7";
+  version = "5.10.0-rc5";
   additionalConfig = {
     name = "pinebookpro-config-fixes";
     patch = null;
@@ -47,7 +47,7 @@ buildLinux (args // {
     pkgs.kernelPatches.bridge_stp_helper
     pkgs.kernelPatches.request_key_helper
     #pkgs.kernelPatches.export_kernel_fpu_functions."5.3"
-    additionalConfig
+    #additionalConfig
   ]);
 
   # modDirVersion needs to be x.y.z, will automatically add .0 if needed
@@ -60,8 +60,8 @@ buildLinux (args // {
     domain = "gitlab.manjaro.org";
     owner = "tsys";
     repo = "linux-pinebook-pro";
-    rev = "a8f4db8a726e5e4552e61333dcd9ea1ff35f39f9";
-    sha256 = "1vbach0y28c29hjjx4sc9hda4jxyqfhv4wlip3ky93vf4gxm2fij";
+    rev = "c04087388bdb7d79d5202ffb91aa387e36901056";
+    sha256 = "sha256-iV8OsWxZoFnwsexRI1S5RQYbGiBE995n0Nh8EBFe/UU=";
   };
 
   postInstall = (optionalString (args ? postInstall) args.postInstall) + ''
